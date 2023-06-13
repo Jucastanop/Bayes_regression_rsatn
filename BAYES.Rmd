@@ -116,7 +116,7 @@ dev.off()
 
 ```
 
-# Modelo2 con train sólo con las variables significativas, x1, x2, x5(con duda),se van x3,x4,x8
+# Modelo2 con train con variables significativas,se van x3,x4,x8
 
 ```{r}
 X2 <- model.matrix(~ . , data = train[,-c(3,4,8,9)])
@@ -182,7 +182,7 @@ traceplot(fit2)
 
 ```
 
-# Quitando las variables que daban significativas si eliminabamos los ceros
+# Modelo3 con train con variables significativas,se van x4,x5,x8
 
 ```{r}
 
@@ -249,7 +249,7 @@ dev.off()
 traceplot(fit3)
 ```
 
-# Verosimilitud para esos tres modelos
+# Verosimilitud y factor de bayes para esos tres modelos
 
 ```{r}
 ##Comparacion empleando factores de Bayes
